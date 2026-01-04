@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Happy birthday</title>
+	</head>
+	
+	<body>
+		<audio id="birthdayMusic" loop>
+    	<source src="hpbd.mp3" type="audio/mpeg">
+		</audio>
+		<div class="music-control" id="musicToggle">
+			<i class="fa-solid fa-play"></i>
+		</div>
+		<div class="container">
+			<div class="boxcontainer">
+				<div class="image">
+					<img src="flag.png" alt="" />
+				</div>
+				<div class="text-happybirthday">
+					<img src="texthappy.png" alt="" />
+				</div>
+				<div class="cake">
+					<img src="cake.png" alt="" />
+				</div>
+				<div class="box-balloon">
+					<div class="balloon-item1">
+						<img src="balloon.png" alt="" />
+					</div>
+					<div class="balloon-item1">
+						<img src="balloon.png" alt="" />
+					</div>
+				</div>
+				<div class="box-cloud">
+					<div class="cloud">
+						<img src="cloud.png" alt="" />
+					</div>
+					<div class="cloud">
+						<img src="cloud.png" alt="" />
+					</div>
+				</div>
+				<div class="box-firework">
+					<div class="firework">
+						<img src="firework.png" alt="" />
+						<img src="firework1.png" alt="" id="firework1" />
+					</div>
+					<div class="firework">
+						<img src="firework.png" alt="" />
+						<img src="firework1.png" alt="" id="firework1" />
+					</div>
+				</div>
+				<div class="paperCannons">
+					<img src="paperCannons1.png" alt="" />
+				</div>
+				<div class="box-giftbox">
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+				</div>
+				<div class="mail">
+					<i class="fa-regular fa-envelope"></i>
+				</div>
+				<div class="boxcute">
+					<div class="cute1">
+						<img src="cute.png" alt="" />
+					</div>
+					<div class="cute2">
+						<img src="cute.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="boxMail">
+				<i class="fa-solid fa-xmark"></i>
+				<div class="boxMail-container">
+					<div class="card1">
+						<div class="userImg">
+							<img src="Picture3.jpg" alt="" />
+						</div>
+						<h3>Happy birthday</h3>
+						<div class="imageCute">
+							<img src="cute1.png" alt="" />
+						</div>
+					</div>
+					<div class="card2">
+						<div class="card2-content">
+							<h3>Gửi bạn Hưởng thân mến !</h3>
+							<h2>
+								Hôm nay là một ngày đặc biệt đối với một người đặc biệt nì. Chúc
+								bạn có một ngày sinh nhật thật ý nghĩa, vui vẻ, hạnh phúc bên
+								gia đình và bạn bè. Chúc bạn sang tuổi mới lun lun vui vẻ, phải
+								lun lun vui tươi nháaaaa hahah, ngày càng xưn đẹp
+								hơn những năm trước nha hahaha ,
+								học giỏi nì nhưng mà học vẫn phải chú ý giữ gìn sức khỏe bạn nhé
+								:3 
+								 chúc cô gái đặc biệt sinh nhật vui vẻ nhaaaaaaaaaa.
+								Chúc bạn tất cả những điều tốt đẹp nhấtttttt nhéeeeeeee hihi^^ Happy birthday
+								
+							</h2>
+							<div class="birthday-img">
+							<img src="girl.jpg" alt="Ảnh của em">
+							</div>
+							<div class="imageCute2">
+								<img src="cute2.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+<script>
+	/* =========================
+	HIỆU ỨNG TIM - MÁY TÍNH
+	========================= */
+	document.addEventListener('mousemove', function (e) {
+		let heart = document.createElement('span');
+		heart.className = 'heart';
+		heart.style.left = e.clientX + 'px';
+		heart.style.top = e.clientY + 'px';
+
+		let size = Math.random() * 10 + 5;
+		heart.style.width = size + 'px';
+		heart.style.height = size + 'px';
+
+		heart.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+		document.body.appendChild(heart);
+
+		setTimeout(() => heart.remove(), 1000);
+	});
+
+	/* =========================
+	HIỆU ỨNG TIM - ĐIỆN THOẠI
+	========================= */
+	document.addEventListener('touchmove', function (e) {
+		let touch = e.touches[0];
+		let heart = document.createElement('span');
+		heart.className = 'heart';
+
+		heart.style.left = touch.clientX + 'px';
+		heart.style.top = touch.clientY + 'px';
+
+		let size = Math.random() * 10 + 5;
+		heart.style.width = size + 'px';
+		heart.style.height = size + 'px';
+
+		document.body.appendChild(heart);
+
+		setTimeout(() => heart.remove(), 1000);
+	});
+
+	/* =========================
+	ĐIỀU KHIỂN NHẠC
+	========================= */
+	const music = document.getElementById("birthdayMusic");
+	const toggleBtn = document.getElementById("musicToggle");
+	const icon = toggleBtn.querySelector("i");
+
+	let isPlaying = false;
+
+	toggleBtn.addEventListener("click", function () {
+		if (!isPlaying) {
+			music.volume = 0.6;
+			music.play().catch(() => {});
+			icon.classList.remove("fa-play");
+			icon.classList.add("fa-pause");
+			isPlaying = true;
+		} else {
+			music.pause();
+			icon.classList.remove("fa-pause");
+			icon.classList.add("fa-play");
+			isPlaying = false;
+		}
+	});
+
+	/* =========================
+	MỞ / ĐÓNG THƯ (KHÔNG TẮT NHẠC)
+	========================= */
+	const mailBox = document.querySelector('.mail');
+	const boxmail = document.querySelector('.boxMail');
+	const closeBtn = document.querySelector('.fa-xmark');
+
+	mailBox.addEventListener('click', function () {
+		boxmail.classList.add('active');
+	});
+
+	closeBtn.addEventListener('click', function () {
+		boxmail.classList.remove('active');
+	});
+</script>
+
+
+</html>
